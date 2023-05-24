@@ -6,8 +6,9 @@
             "use": "@now/node"
         }
     ],
-    "rewrites": [
+    "routes": [
         {
+
           "source": "(.*)",
           "dest": "index.js"
         }
