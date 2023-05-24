@@ -1,9 +1,9 @@
-const {produtos} = require('../produtos.json')
 const express = require('express');
+const { salaDeEstar } = require('../salaDeEstar');
 const salaDeEstarRoutes = express.Router();
 
-salaDeEstarRoutes.get("/produtos/sala-de-estar", (req, res) => {
-    return res.json(produtos['sala-de-estar'])
-})
+salaDeEstarRoutes.get('/produtos/categoria/sala-de-estar', (req, res) => {
+    return res.json(salaDeEstar)
+});
 
-module.exports = salaDeEstarRoutes
+module.exports = salaDeEstarRoutes;

@@ -1,9 +1,9 @@
-const {produtos} = require('../produtos.json')
 const express = require('express');
+const { decoracao } = require('../decoracao');
 const decoracaoRoutes = express.Router();
 
-decoracaoRoutes.get("/produtos/decoracao", (req, res) => {
-    return res.json(produtos.decoracao)
-})
+decoracaoRoutes.get('/produtos/categoria/decoracao', (req, res) => {
+    return res.json(decoracao)
+});
 
-module.exports = decoracaoRoutes
+module.exports = decoracaoRoutes;
