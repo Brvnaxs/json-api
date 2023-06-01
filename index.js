@@ -12,7 +12,7 @@ const App = express();
 
 App.use(express.json());
 App.use(express.urlencoded({ extended: true }));
-App.use(cors)
+App.use(cors())
 
 App.use(produtosRoutes);
 App.use(categoriasRoutes);
@@ -25,5 +25,5 @@ App.use(salaDeJantarRoutes);
 
 const PORT = process.env.PORT || 3000;
 App.listen(PORT, () => {
-    console.log('API rodando na porta: http://localhost:3000')
+    console.log('API rodando.')
 });
