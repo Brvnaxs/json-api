@@ -22,7 +22,9 @@ App.use(banheiroRoutes);
 App.use(cozinhaRoutes);
 App.use(salaDeEstarRoutes);
 App.use(salaDeJantarRoutes);
-
+ App.get("/", (req, res) =>{
+    res.sendFile(__dirname + '/README.md');
+ })
 const PORT = process.env.PORT || 3000;
 App.listen(PORT, () => {
     console.log('API rodando.')
